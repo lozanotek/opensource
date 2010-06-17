@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Domain" assembly="Domain">
+
+    <class name="Category" table="Categories" lazy="false">
+        <id name="Id">
+            <column name="Id" />
+            <generator class="guid"/>
+        </id>
+
+        <property name="Name">
+            <column name="Name" length="50" unique="true"/>
+        </property>
+
+        <property name="Description">
+            <column name="Description" />
+        </property>
+
+        <set name="Posts" table="PostCategories" access="field.lowercase" lazy="false" cascade="all">
+            <key column="CategoryId" />
+
+            <many-to-many class="Domain.Post, Domain" column="PostId" />
+        </set>
+        
+        <property name="CreatedDate">
+            <column name="PostedDate" sql-type="datetime"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "unittesting", "unittesting\unittesting.csproj", "{B68D201A-E76D-4E70-8081-B0EF05BDAF4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "units", "units\units.csproj", "{BA049BCC-8CA7-4844-AE76-AC10CCA88AE6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B68D201A-E76D-4E70-8081-B0EF05BDAF4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B68D201A-E76D-4E70-8081-B0EF05BDAF4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B68D201A-E76D-4E70-8081-B0EF05BDAF4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B68D201A-E76D-4E70-8081-B0EF05BDAF4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA049BCC-8CA7-4844-AE76-AC10CCA88AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA049BCC-8CA7-4844-AE76-AC10CCA88AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA049BCC-8CA7-4844-AE76-AC10CCA88AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA049BCC-8CA7-4844-AE76-AC10CCA88AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

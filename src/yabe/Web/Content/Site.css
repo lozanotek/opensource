@@ -1,0 +1,209 @@
+﻿/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	color: black;
+}
+
+body, th, td, input, textarea, select, option {
+	font-weight: normal;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3 {
+	font-weight: bold;
+	color: black;
+}
+
+h1 {
+	text-transform: lowercase;
+	letter-spacing: -1px;
+	font-size: 24px;
+}
+
+h2 {
+	text-transform: lowercase;
+	letter-spacing: -1px;
+	font-size: 2em;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+p, ul, ol {
+	line-height: 200%;
+}
+
+blockquote {
+	padding-left: 1em;
+}
+
+blockquote p, blockquote ul, blockquote ol {
+	line-height: normal;
+	font-style: italic;
+}
+
+a {
+    font-size: medium;
+    font-weight: bold;  
+	color: black;
+	text-transform: lowercase;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Header */
+#header {
+	height: 60px;
+	text-align: right;
+}
+
+/* Logo */
+#logo {
+	padding: 40px 0 0 0;
+}
+
+#logo h1 {
+	margin: 0;
+	text-transform: lowercase;
+	letter-spacing: -2px;
+	font-size: 3.6em;
+	font-weight: normal;
+	color: #FFFFFF;
+}
+
+#logo h1 a {
+	padding-right: 20px;
+	text-decoration: none;
+	color: black;
+}
+
+#logo p {
+	margin: -5px 0 0 0;
+	text-transform: uppercase;
+	font-size: 1.22em;
+	letter-spacing: -1px;
+}
+
+#logo a {
+	text-decoration: none;
+	color: red;
+}
+
+/* Menu */
+#menu 	
+{
+    
+}
+
+#menu ul 
+{	
+	float: right;
+	margin: 0px;
+	padding: 0px 0px 0px 0px;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	display: block;
+	float: left;
+	margin-left: 15px;
+	text-decoration: none;
+	text-transform: lowercase;
+	font-size: 1.2em;
+	color: black;
+}
+
+#menu a:hover, a.active {
+	border-bottom: 3px solid black;
+}
+
+/* Page */
+#page 
+{
+	position:relative;
+	margin: 0px auto;
+}
+
+/* Content */
+#content {
+	position: relative;
+	margin: 0px;
+}
+
+/* Footer */
+#footer {
+	clear: both;
+	margin: 0px;
+}
+
+#footer p {
+	padding: 20px 0;
+	text-align: center;
+	font-size: smaller;
+	font-weight: bold;
+	color: black;
+}
+
+.error{
+	background-color: #FF6666;
+	color: Black;
+	font-weight: bold;
+}
+
+label.formError {
+	color: #FFEFD5;
+}
+
+/* Forms */
+fieldset
+{
+	float: left;
+	border: none;
+}
+
+fieldset legend
+{	
+	margin-left: 30px;
+	padding: 3px;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+fieldset label
+{
+	margin-top: 7px;
+	display: block;
+}
+
+fieldset .button-row
+{
+    margin-top: 25px;
+    text-align: center;
+}
+
+table tr th
+{
+	background-color: #333;
+	color: #eee;
+	padding: 2px;
+}
+
+table tr td
+{	
+	padding: 5px;
+}

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="domain" assembly="domain">
+
+    <class name="Person" table="People" lazy="false">
+        <id name="Id">
+            <column name="GID" />
+            <generator class="guid"/>
+        </id>
+
+        <component class="domain.Name, domain" name="FullName">
+            <property name="FirstName">
+                <column name="First_Name"/>
+            </property>
+
+            <property name="MiddleName">
+                <column name="Middle_Name"/>
+            </property>
+
+            <property name="LastName">
+                <column name="Last_Name"/>
+            </property>
+        </component>
+
+
+        <many-to-one class="domain.Address, domain" name="Address" column="AddressId"  />
+    </class>
+</hibernate-mapping>

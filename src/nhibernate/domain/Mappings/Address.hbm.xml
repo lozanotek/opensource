@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   namespace="domain" assembly="domain">
+
+    <class name="Address" table="Addresses" lazy="false">
+        <id name="Id">
+            <column name="GID" />
+            <generator class="guid"/>
+        </id>
+
+        <property name="Line1">
+            <column name="Line_1"/>
+        </property>
+
+        <property name="Line2">
+            <column name="Line_2"/>
+        </property>
+
+        <property name="City">
+            <column name="City"/>
+        </property>
+
+        <property name="State">
+            <column name="State"/>
+        </property>
+
+        <property name="Zip">
+            <column name="Zip"/>
+        </property>
+
+    </class>
+</hibernate-mapping>

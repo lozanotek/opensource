@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Domain" assembly="Domain">
+
+    <class name="Comment" table="Comments" lazy="false">
+        <id name="Id">
+            <column name="Id" />
+            <generator class="guid"/>
+        </id>
+
+        <property name="Author">
+            <column name="Author" length="50"/>
+        </property>
+
+        <property name="Text">
+            <column name="Text" />
+        </property>
+
+        <property name="PostedDate">
+            <column name="PostedDate" sql-type="datetime"/>
+        </property>
+    </class>
+</hibernate-mapping>
+
