@@ -17,6 +17,8 @@
             });
 
             References(x => x.Address);
+
+            Not.LazyLoad();
         }
     }
 }

@@ -3,7 +3,9 @@
     using System;
     using System.Collections.Generic;
     using System.Threading;
+    using System.Linq;
     using domain;
+    using fluent;
     using NHibernate;
     using NHibernate.Cfg;
     using NHibernate.Tool.hbm2ddl;
@@ -23,6 +25,9 @@
             GetPeople();
 
             //Sleep();
+
+            GetPeopleViaLinq();
+
 
             //GetOnePerson();
 
@@ -44,9 +49,11 @@
         {
             Console.WriteLine("--- CREATING DATABASE ---");
 
-            Configuration config = new Configuration().Configure();
+            //Configuration config = new Configuration().Configure();
+            Configuration config = FluentManager.GetConfig();
+
             var export = new SchemaExport(config);
-            
+
             export.Drop(false, false);
             export.Create(true, true);
         }
@@ -92,13 +99,26 @@
 
             ISession session = GetSession();
 
-            ICriteria targetObjects = session.CreateCriteria(typeof (Person));
+            ICriteria targetObjects = session.CreateCriteria(typeof(Person));
             IList<Person> personList = targetObjects.List<Person>();
 
             IQuery query = session.CreateQuery("from Person");
             IList<Person> anotherPersonList = query.List<Person>();
 
             session.Dispose();
+
+            PrintPeople("Using ICritiria...", personList);
+            PrintPeople("Using IQuery...", anotherPersonList);
+        }
+
+        public static void GetPeopleViaLinq()
+        {
+            Console.WriteLine("--- GETTING A LIST OF PEOPLE THROUGH LINQ ---");
+
+            var personSource = FluentManager.GetQuery<Person>();
+
+            IList<Person> personList = personSource.ToList();
+            IList<Person> anotherPersonList = personSource.ToList();
 
             PrintPeople("Using ICritiria...", personList);
             PrintPeople("Using IQuery...", anotherPersonList);
@@ -200,13 +220,15 @@
 
         private static ISession GetSession()
         {
-            // Initialize
-            var config = new Configuration();
-            config.Configure();
+            //// Initialize
+            //var config = new Configuration();
+            //config.Configure();
 
-            // Create session factory from configuration object
-            ISessionFactory factory = config.BuildSessionFactory();
-            return factory.OpenSession();
+            //// Create session factory from configuration object
+            //ISessionFactory factory = config.BuildSessionFactory();
+            //return factory.OpenSession();
+
+            return FluentManager.GetSession();
         }
     }
 }

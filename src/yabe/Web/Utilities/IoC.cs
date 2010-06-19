@@ -73,7 +73,7 @@ namespace Web.Utilities
         public static void Register(string key, Type type, LifestyleType lifestyleType)
         {
             EnsureInitialized();
-            _container.AddComponentWithLifestyle(key, type, lifestyleType);
+            _container.AddComponentLifeStyle(key, type, lifestyleType);
         }
 
         public static IWindsorContainer GetContainer()

@@ -14,6 +14,8 @@
             Map(x => x.Line2);
             Map(x => x.State);
             Map(x => x.Zip);
+
+            Not.LazyLoad();
         }
     }
 }

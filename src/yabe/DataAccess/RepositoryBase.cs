@@ -4,7 +4,7 @@
     using System.Collections.Generic;
     using Domain;
     using NHibernate;
-    using NHibernate.Expression;
+    using NHibernate.Criterion;
 
     public class RepositoryBase<TEntity> : ICRUDRepository<TEntity>
         where TEntity : EntityBase, new()
