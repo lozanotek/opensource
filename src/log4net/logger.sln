@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "logger", "logger\logger.csproj", "{2B4229DB-D0CC-43D2-92CE-0E91A1D26EBE}"
 EndProject
 Global

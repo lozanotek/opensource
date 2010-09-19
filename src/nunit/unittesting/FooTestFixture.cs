@@ -110,20 +110,4 @@
             Assert.AreNotEqual(index, -1);
         }
     }
-
-    internal class BarMock : IBar
-    {
-        #region IBar Members
-
-        public void PerformAction()
-        {
-        }
-
-        public int PerformCalculation()
-        {
-            return 0;
-        }
-
-        #endregion
-    }
 }
