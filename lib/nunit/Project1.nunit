@@ -1,0 +1,8 @@
+﻿<NUnitProject>
+  <Settings activeconfig="Debug" />
+  <Config name="Debug" binpathtype="Auto">
+    <assembly path="..\..\src\nunit\unittesting\bin\Debug\unittesting.dll" />
+    <assembly path="..\..\src\nunit\unittesting\bin\Debug\Rhino.Mocks.dll" />
+  </Config>
+  <Config name="Release" binpathtype="Auto" />
+</NUnitProject>

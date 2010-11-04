@@ -1,6 +1,7 @@
 namespace windsor
 {
     using System;
+    using Castle.MicroKernel.Registration;
     using Castle.Windsor;
     using Castle.Windsor.Configuration.Interpreters;
 
@@ -9,8 +10,10 @@ namespace windsor
         // Models singleton over transient instance models
         static void Main(string[] args)
         {
-            IWindsorContainer container = 
+            IWindsorContainer container =
                 new WindsorContainer(new XmlInterpreter("windsor.config"));
+
+            //IWindsorContainer container = CreateContainer();
 
             IBar bar = container.Resolve<IBar>();
             
@@ -34,6 +37,15 @@ namespace windsor
 
             Console.Write("Press <ENTER> to exit...");
             Console.ReadLine();
+        }
+
+        public static IWindsorContainer CreateContainer() {
+            // http://using.castleproject.org/display/IoC/Fluent+Registration+API
+            var container = new WindsorContainer();
+            container.Register(
+                Component.For<IBar>().ImplementedBy<Bar>().LifeStyle.Transient);
+
+            return container;
         }
     }
 }

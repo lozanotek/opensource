@@ -79,6 +79,7 @@
   <ItemGroup>
     <None Include="windsor.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>
